@@ -1,4 +1,4 @@
-import React from 'react';
+hingimport React from 'react';
 import './App.css';
 import { useState } from 'react';
 import { startTransition } from 'react';
@@ -20,7 +20,7 @@ export const Game = () => {
 	return (
 		<div className="App">
 			<Field />
-			
+			something
 		</div>
 	);
 };
