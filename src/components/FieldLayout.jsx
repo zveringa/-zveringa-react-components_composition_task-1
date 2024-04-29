@@ -1,36 +1,15 @@
 import './FieldLayout.css';
+import React from 'react';
 
-export const FieldLayout = () => {
+export const FieldLayout = ({ field, handleCellClick }) => {
     return (
         <>
-            <div className="container">
-                <div className="board">
-                <tbody> 
-              <tr>
-                {NUMS.slice(0, 3).map((number) => (
-                  <td key={number}>
-                     <Button number={number} onClick={handleCellClick} />
-                  </td>
+            <div className="field">
+                {field.map((cell, index) => (
+                    <div key={index} className="cell" onClick={() => handleCellClick(index)}>
+                        {cell}
+                    </div>
                 ))}
-              </tr>
-              </tbody>
-              
-                    <div className="row">
-                        <div className="cell" data-cell></div>
-                        <div className="cell" data-cell></div>
-                        <div className="cell" data-cell></div>
-                    </div>
-                    <div className="row">
-                        <div className="cell" data-cell></div>
-                        <div className="cell" data-cell></div>
-                        <div className="cell" data-cell></div>
-                    </div>
-                    <div className="row">
-                        <div className="cell" data-cell></div>
-                        <div className="cell" data-cell></div>
-                        <div className="cell" data-cell></div>
-                    </div>
-                </div>
             </div>
         </>
     );
